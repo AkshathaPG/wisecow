@@ -9,10 +9,10 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 # Clone the GitHub repository
-RUN git clone  /app
+RUN git clone  https://github.com/AkshathaPG/wisecow.git /app
 
 # Copy wisecow.sh into the container
-COPY wisecow.sh /app
+COPY wisecow /app
 
 # Set working directory
 WORKDIR /app
